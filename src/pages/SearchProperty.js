@@ -22,6 +22,8 @@ class SearchProperty extends PureComponent {
     console.log("Setting style top to ", rect.top)
     window.myIframe.style.top = rect.top + "px"
     window.myIframe.style.bottom = rect.bottom + "px"
+    window.myIframe.style.left = rect.left + "px"
+    window.myIframe.style.right = rect.right + "px"
     window.myIframe.width = rect.width + "px"
     window.myIframe.height = rect.height + "px"
   }

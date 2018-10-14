@@ -1,13 +1,16 @@
 html, body, #root {
   margin: 0;
   padding: 0;
-  height: 100%;
-
+  font-family: 'Lato', sans-serif;
 }
 
 ul {
   margin: 0;
   padding: 0;
+  list-style: none;
+  li {
+    list-style: none;
+  }
 }
 iframe {
   border: 0;

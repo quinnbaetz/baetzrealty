@@ -31,15 +31,19 @@ i18n
       en: {
         translation: {
           Home: 'Home',
-          Search: 'Search',
-          'coming Soon': 'coming Soon'
+          'Find Your Home': 'Find Your Home',
+          'coming Soon': 'coming Soon',
+          'Keller Williams Description': 'Keller Williams Realty, Inc. is a real estate franchise company. Each Keller Williams office is independently owned and operated. Keller Williams Realty, Inc. is an Equal Opportunity Employer and supports the Fair Housing Act.',
+          'copywrite': "©2018 By Natalia Baetz."
         },
       },
       es: {
         translation: {
-          Home: 'Casa',
-          Search: 'Buscar',
-          'coming soon': 'viene pronto'
+          Home: 'Inicio',
+          'Find Your Home': 'Encuentre su casa',
+          'coming soon': 'viene pronto',
+          'Buyers': 'Compredores',
+          'Sellers': 'Vendedores'
         },
       },
     },

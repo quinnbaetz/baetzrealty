@@ -1,10 +1,9 @@
 import 'components/Header.scss'
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import translationHOC from 'hocs/translationHOC';
 import _ from 'lodash'
-
+import Nav from 'components/Nav'
 
 const LanguageOption = translationHOC((props) => {
   const {text, language, changeLanguage, currentLanguage} = props
@@ -23,25 +22,30 @@ const LanguageOption = translationHOC((props) => {
 
 class Header extends React.Component {
   render(){
-    const {t,changeLanguage, currentLanguage} = this.props
     return (
       <div className="header">
-        <nav>
-          <ul>
-            <li><NavLink exact activeClassName="current" to='/'>{t('Home')}</NavLink></li>
-            <li><NavLink exact activeClassName="current" to='/search'>{t('Search')}</NavLink></li>
+        <div className='header_contact'>
+          <div>
+            Natalia Baetz
+          </div>
+          <div>
+            <span>510-698-2741</span>
+            <span>NataliaBaetz@kw.com</span>
+          </div>
+        </div>
+        <div className="header_main">
+          <Nav />
+          <ul className='language'>
+            <LanguageOption
+              text="English"
+              language='en'
+            />
+            <LanguageOption
+              text="Español"
+              language='es'
+            />
           </ul>
-        </nav>
-        <ul className='language'>
-          <LanguageOption
-            text="English"
-            language='en'
-          />
-          <LanguageOption
-            text="Spanish"
-            language='es'
-          />
-        </ul>
+        </div>
       </div>
 
     )
