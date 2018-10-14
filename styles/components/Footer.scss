@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 0 15px;
+    .name {
+      font-weight: bold;
+    }
+    &>*{
+      flex: 1;
+      justify-content: space-between;
+    }
+  }
+  .logos {
+    img {
+      display: block;
+
+    }
+  }
+}

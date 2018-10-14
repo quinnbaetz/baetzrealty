@@ -1,8 +1,9 @@
 import React from 'react';
-const Home = () => (
+import translationHOC from 'hocs/translationHOC'
+const Home = (props) => (
    <div className='home'>
-     <h1>Natalia Baetz comming soon</h1>
+     <h1>Natalia Baetz {props.t('coming soon')}</h1>
    </div>
  );
 
- export default Home;
+ export default translationHOC(Home);

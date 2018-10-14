@@ -31,13 +31,15 @@ i18n
       en: {
         translation: {
           Home: 'Home',
-          'Search': 'Search'
+          Search: 'Search',
+          'coming Soon': 'coming Soon'
         },
       },
       es: {
         translation: {
           Home: 'Casa',
-          Search: 'Buscar'
+          Search: 'Buscar',
+          'coming soon': 'viene pronto'
         },
       },
     },

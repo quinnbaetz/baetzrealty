@@ -14,28 +14,32 @@ class SearchProperty extends PureComponent {
       loading: false
     })
   }
+
+  setupIframe = () => {
+    const rect = this.refs.container.getBoundingClientRect()
+    window.myIframe.style.display = 'block'
+    window.myIframe.style.position = 'absolute'
+    console.log("Setting style top to ", rect.top)
+    window.myIframe.style.top = rect.top + "px"
+    window.myIframe.style.bottom = rect.bottom + "px"
+    window.myIframe.width = rect.width + "px"
+    window.myIframe.height = rect.height + "px"
+  }
+
+  componentDidMount() {
+    this.setupIframe()
+    window.addEventListener("resize", this.setupIframe)
+  }
+  componentWillUnmount() {
+    window.myIframe.style.display = 'none'
+    window.removeEventListener("resize", this.setupIframe)
+  }
+
   render(){
       const {loading} = this.state
       return (
-        <div className='SearchProperty'>
-          <iframe
-            style={{
-              display: loading ? 'none' : 'block'
-            }}
-            width='100%'
-            height="100%"
-            scrolling="auto"
-            src={url}
-            onLoad={this.onLoad}
-          />
+        <div ref='container' className='SearchProperty'>
 
-          {loading && <div style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%"
-          }}>
-            <Spinner name="ball-spin-fade-loader" />
-          </div>}
         </div>
       );
   }
