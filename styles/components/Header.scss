@@ -1,78 +1,95 @@
+@import "dimensions.scss";
+
 .header {
-  .header_contact {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
+  .header_contact_wrapper {
     background-color: #f1f1f1;
-    span {
-      padding: 5px;
+    display: flex;
+    justify-content: center;
+    .header_contact {
+      display: flex;
+      justify-content: space-between;
+      max-width: $max_page_width;
+      width: $max_page_width;
+      padding: 10px;
+      span {
+        padding: 5px 0px 5px 5px;
+      }
     }
   }
-  .header_main {
+  .header_main_wrapper {
     background-color: #83D0CA;//#79ccc5eb;
-    display: flex;
-    justify-content: space-between;
     border: 5px dotted white;
     border-width: 5px 0;
     border-top-color: #f1f1f1;
-
-    a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 24px;
-      &:hover {
-        color: black;
-      }
-      &.current {
-        text-decoration: underline;
-      }
-    }
-    .mainNav {
-      margin: 0;
-      padding: 0;
+    display: flex;
+    justify-content: center;
+    .header_main {
       display: flex;
-      &>li {
+      justify-content: space-between;
+      max-width: $max_page_width;
+      width: $max_page_width;
+
+      padding: 10px;
+      a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 24px;
         &:hover {
-          ul {
-            display: block;
-          }
-        }
-        padding: 10px;
-        position: relative;
-
-        ul {
-          background-color: #f1f1f1;
-          position: absolute;
-          display: none;
-          left: -10px;
-          top: 48px;
-
           color: black;
-          li {
-            white-space: nowrap;
-            margin: 10px;
-            border-bottom: 1px solid white;
-            &:last-child {
-              border-bottom: 0px;
+        }
+        &.current {
+          text-decoration: underline;
+        }
+      }
+      .mainNav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        &>li {
+          &:hover {
+            ul {
+              display: block;
             }
-            a {
-              color: black;
+          }
+          position: relative;
+          padding-right: 10px;
+          ul {
+            background-color: #f1f1f1;
+            position: absolute;
+            display: none;
+            left: -10px;
+            top: 48px;
 
+            color: black;
+            li {
+              white-space: nowrap;
+              margin: 10px;
+              border-bottom: 1px solid white;
+              &:last-child {
+                border-bottom: 0px;
+              }
+
+              a {
+                color: black;
+
+              }
             }
           }
         }
       }
-    }
-    .language {
-      display: flex;
-      margin-right: 14px;
-      li {
-        margin: 4px;
-        a {
-          font-size: 12px;
-          &:hover {
-            color: black;
+      .language {
+        display: flex;
+        li {
+          margin: 4px;
+          &:last-child {
+            margin-right: 0px;
+          }
+          a {
+            font-size: 12px;
+            &:hover {
+              color: black;
+            }
           }
         }
       }

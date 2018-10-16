@@ -24,30 +24,33 @@ class Header extends React.Component {
   render(){
     return (
       <div className="header">
-        <div className='header_contact'>
-          <div>
-            Natalia Baetz
-          </div>
-          <div>
-            <span>510-698-2741</span>
-            <span>NataliaBaetz@kw.com</span>
+        <div className="header_contact_wrapper">
+          <div className='header_contact'>
+            <div>
+              Natalia Baetz
+            </div>
+            <div>
+              <span>510-698-2741</span>
+              <span>NataliaBaetz@kw.com</span>
+            </div>
           </div>
         </div>
-        <div className="header_main">
-          <Nav />
-          <ul className='language'>
-            <LanguageOption
-              text="English"
-              language='en'
-            />
-            <LanguageOption
-              text="Español"
-              language='es'
-            />
-          </ul>
+        <div className="header_main_wrapper">
+          <div className="header_main">
+            <Nav />
+            <ul className='language'>
+              <LanguageOption
+                text="English"
+                language='en'
+              />
+              <LanguageOption
+                text="Español"
+                language='es'
+              />
+            </ul>
+          </div>
         </div>
       </div>
-
     )
   }
 };

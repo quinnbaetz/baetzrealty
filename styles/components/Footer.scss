@@ -1,3 +1,5 @@
+@import "dimensions.scss";
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
   .top_bar {
     background-color: #d4f5d4;
     &>div {
-      max-width: 1024px;
+      max-width: $max_page_width;
       margin: 0 auto;
       display: flex;
       flex-direction: row;
